@@ -1,0 +1,136 @@
+{% extends 'base.html'  %}
+
+
+{% block content %}
+{% load static %}
+
+
+<br/><br/> <br><br><br>
+
+<section id="about" class="about" ">
+
+    <div class="container" data-aos="fade-up">
+      <div class="row gx-0">
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center" style="background-color: rgb(233, 210, 210)" data-aos="fade-up" data-aos-delay="200">
+         
+         <br><br><br><br>
+          <div class="content">
+            
+            <h2 style="color: blue;"> DEMANDER UN EXTRAIT DE NAISSANCE EN UN CLIC  </h2>
+            <p >
+                
+
+                Faire une demande d'extrait de naissance avec NASEBE est tres simple.
+                <ul >
+                <li>Rendez vous sur l'application NASEBE.</li>
+                <li>Remplisser le formulaire de demande d'extrait en quelques secondes.</li>
+                <li>Envoyer votre demande et faites votre paiement .</li>
+                <li>Livraison a domicile  .</li>
+                
+               </ul>
+
+            </p> <br>
+            <div class="text-center text-lg-start">
+              <a href="{% url 'demande_extrait' %}" class="but-stbutton-8 text-small uppercase">
+                
+                DEMANDER UN  EXTRAIT &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <br><br><br> <br>
+        </div>
+
+      
+
+        <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'assets_dashboard/images/demande.jpg' %}" style="width: 150%;" class="img-fluid" alt="">
+        </div>
+
+      </div>
+    </div>
+    <br><br>
+
+  </section>
+ 
+  <section id="about" class="about">
+
+    <div class="container" data-aos="fade-up">
+      <div class="row gx-0">
+
+        <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{% static 'assets_dashboard/images/verifier.jpg' %}" style="width: 100%"; class="img-fluid" alt="">
+          </div>
+        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200" style="background-color: rgb(233, 210, 210);">
+          <div class="content ">
+            <br><br><br>
+            <h2 style="color: blue;" >VERRIFIER LE STATUT DE VOTRE DEMANDE D'EXTRAIT </h2>
+            <p>
+              Avec NASEBE vous pouvez a tout moment voir a quelle stade est le traitement de votre demande d'extrait.
+              Entrez les informations demander dans le formulaire de vérification. Soit :
+              <ul>
+                <li> Vérifier  si votre demande a été deja traitée. </li>
+
+                <li>Vérifier si votre demande est en cours de traitement  </li>
+                <li>Vérifier si votre demande n'a pas encore été traitée (La couleur rouge s'affiche) </li>
+              </ul>
+            </p> <br>
+            <div class="text-center text-lg-start">
+
+              <a href="{% url 'verification' %}" class="but-stbutton-8 text-small uppercase">
+                VERRIFIER MA DEMANDE &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+
+              <br><br>
+            </div>
+          </div>
+        </div>
+
+        <br><br><br><br>
+
+      </div>
+    </div>
+
+    
+
+  </section>
+
+  <br><br><br>
+
+  <section id="about" class="about">
+
+    <div class="container" data-aos="fade-up">
+      <div class="row gx-0">
+
+        <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200" style="background-color: rgb(233, 210, 210);" >
+          <div class="content">
+            <br><br>
+            
+            <h2 style="color: blue;" > VOS RECLAMATIONS</h2>
+            <p>
+              Faites des reclamations sur votre demande d'extrait a l'endroit de la Mairie ou de NASEBE.<br/><br/>
+              Allez sur la page des reclamations remplisser le formulaire et envoyer votre message.<br/><br/>
+              Votre reclamation sera traitée dans les plus bref delais. Nous sommes a votre disposition 24h/24.
+            </p> <br>
+            <div class="text-center text-lg-start">
+
+              <a href="{% url 'reclamation' %}" class="but-stbutton-8 text-small uppercase">
+                FAITES UNE RECLAMATION &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </a>
+             <br><br>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'assets_dashboard/images/reclamation.jpg' %}" style="width: 122%;" class="img-fluid" alt="">
+          <br><br><br>
+        </div> 
+         
+      </div>
+    </div>
+
+  </section>
+  <br><br>
+
+{% endblock %}  

@@ -1,0 +1,426 @@
+{% extends 'base_assets_dashboard.html'  %}
+
+{% block content %}
+{% load static %}
+
+
+    <body>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+            <div class="topbar">
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <a href="{% url 'home' %}" class="logo">
+                        <span>
+                            <img src="{% static 'assets_dashboard/images/logo.jpg' %}" style="width: 40%; border-radius:10%" alt="">
+                            </span>
+                        <i>
+                                <img src="{% static 'assets_dashboard/images/logo-sm.png' %}" alt="" height="22">
+                            </i>
+                    </a>
+                </div>
+
+                <nav class="navbar-custom">
+                    <ul class="navbar-right list-inline float-right mb-0">
+                        <li class="dropdown notification-list list-inline-item d-none d-md-inline-block"> 
+                            <form role="search" class="app-search">
+                                <div class="form-group mb-0">
+                                    <input type="text" class="form-control" placeholder="Rechercher..">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                        </li>
+
+                        <!-- language-->
+                        <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
+                            <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="../static/assets_v/images/flags/french_flag.jpg" class="mr-2" height="12" alt=""/> Français <span class="mdi mdi-chevron-down"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right language-switch">
+                                <a class="dropdown-item" href="#"><img src="{% static 'assets_dashboard/images/flags/french_flag.jpg' %}" alt="" height="16" /><span> Français </span></a>
+     
+                        </li>
+
+                        <!-- full screen -->
+                        <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
+                            <a class="nav-link waves-effect" href="#" id="btn-fullscreen">
+                                <i class="mdi mdi-fullscreen noti-icon"></i>
+                            </a>
+                        </li>
+
+                        <!-- notification -->
+                        <li class="dropdown notification-list list-inline-item">
+                            <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="mdi mdi-bell-outline noti-icon"></i>
+                                <span class="badge badge-pill badge-danger noti-icon-badge">{{nouvelle_demande_abobo}}</span>
+                            </a>
+                        </li>
+                        <li class="dropdown notification-list list-inline-item">
+                            <div class="dropdown notification-list nav-pro-img">
+                                <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <img src="{% static 'assets_dashboard/images/users/userflag.png' %}" alt="user" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                    <!-- item-->
+                                    
+                                    <a class="dropdown-item" href="{% url 'change_password' %}"> <i class="mdi mdi-lock-reset m-r-5"></i> Changer mot de passe </a>
+                                    
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="{% url 'logout' %}"><i class="mdi mdi-power text-danger"></i> Deconnexion</a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <!--- Controller de menu  -->
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <button class="button-menu-mobile open-left waves-effect">
+                                <i class="mdi mdi-menu"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    <!-- Fin controller de menu Bar End -->
+                    
+
+                </nav>
+
+            </div>
+            <!-- Top Bar End -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left side-menu">
+                <div class="slimscroll-menu" id="remove-scroll">
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+                        <!-- Left Menu Start -->
+                        <ul class="metismenu" id="side-menu">
+                            <li class="menu-title">Main</li>
+                            <li>
+                                <a href="{% url 'home' %}" class="waves-effect"><i class="ti-home"></i><span> Accueil </span></a>
+                            </li>
+
+                            <li>
+                                <a href="{% url 'espacemairie' %}" class="waves-effect">
+                                    <i class="mdi mdi-monitor-dashboard"></i><span class="badge badge-primary badge-pill float-right">{{nouvelle_demande_abobo}}</span> <span> Tableau de bord </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{% url 'contact' %}" class="waves-effect">
+                                    <span class="mdi mdi-account-box-outline"></span>
+                                    <span class="badge badge-primary badge-pill float-right"></span> <span> Contact </span>
+                            </li>
+
+
+                            <li class="menu-title">Extras</li>
+
+                            <li>
+                                <a href="{% url 'services' %}" class="waves-effect"><i class="ti-server"></i><span> Services </span></a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- Sidebar -->
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="page-title-box">
+                            <div class="row align-items-center">
+                                
+                                <div class="col-sm-6">
+                                
+                                    <h4 class="page-title">Tableau de bord - Mairie</h4>
+                                
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item active">Bienvenue sur votre tableau de bord Mairie Anyama .</li>
+                                    </ol>
+                                   
+                                </div>
+                                <div class="col-sm-6">
+                                
+                                    <div class="float-right d-none d-md-block">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle arrow-none waves-effect waves-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-settings mr-2"></i> Paramètres
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="{% url 'change_password' %}"> <i class="mdi mdi-lock-reset m-r-5"></i> Changer mot de passe </a>
+                                    
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item text-danger" href="{% url 'logout' %}"><i class="mdi mdi-power text-danger"></i> Deconnexion</a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <!-- Start of the Statistics of requests section-->
+
+
+                        <h3 class="mt-0 header-title mb-5">Statistiques des demandes</h3>
+
+                        <div class="row">
+                            
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat bg-primary text-white">
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <div class="float-left mini-stat-img mr-4">
+                                                <img src="{% static 'assets_dashboard/images/services-icon/03.png' %}" alt="" >
+                                            </div>
+                                            <h5 class="font-14 text-uppercase mt-0 font-weight-bold">NOUVELLES </h5>
+                                            <h4 class="font-500">{{nouvelle_demande_abobo}} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>
+                                            <div class="mini-stat-label bg-info">
+                                                <p class="mb-0"> {{pourcentage_nouvelle_demande}} %</p>
+                                            </div>
+                                        </div>
+                                        <div class="pt-2">
+                                            <div class="float-right">
+                                                <a href="{% url 'nouvelle_demande' %}" class="text-white-50"><i class="mdi mdi-arrow-right h5"></i></a>
+                                            </div>
+        
+                                            
+        
+                                            <p class="text-white-50 mb-0">Voir plus...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat bg-primary text-white">
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <div class="float-left mini-stat-img mr-4">
+                                                <img src="{% static 'assets_dashboard/images/services-icon/03.png' %}" alt="" >
+                                            </div>
+                                            <h5 class="font-14 text-uppercase mt-0 font-weight-bold">Acceptées</h5>
+                                            <h4 class="font-500"> {{nombre_demande_accepte_abobo}} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>
+                                            <div class="mini-stat-label bg-info">
+                                                <p class="mb-0"> {{pourcentage_accepte_demande}} %</p>
+                                            </div>
+                                        </div>
+                                        <div class="pt-2">
+                                            <div class="float-right">
+                                                <a href="{% url 'demande_accepte' %}" class="text-white-50"><i class="mdi mdi-arrow-right h5"></i></a>
+                                            </div>
+        
+                                            <p class="text-white-50 mb-0">Voir plus...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat bg-primary text-white">
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <div class="float-left mini-stat-img mr-4">
+                                                <img src="{% static 'assets_dashboard/images/services-icon/01.png' %}" alt="" >
+                                            </div>
+                                            <h5 class="font-14 text-uppercase mt-0 font-weight-bold">DELIVREES</h5>
+                                            <h4 class="font-500">{{nombre_demande_livre_abobo}} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>
+                                            <div class="mini-stat-label bg-success">
+                                                <p class="mb-0"> {{pourcentage_livre_demande}} % </p>
+                                            </div>
+                                        </div>
+                                        <div class="pt-2">
+                                            <div class="float-right">
+                                                <a href="#" class="text-white-50"><i class="mdi mdi-arrow-right h5"></i></a>
+                                            </div>
+        
+                                            <p class="text-white-50 mb-0">Voir plus...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat bg-primary text-white">
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <div class="float-left mini-stat-img mr-4">
+                                                <img src="{% static 'assets_dashboard/images/services-icon/02.png' %}" alt="" >
+                                            </div>
+                                            <h5 class="font-14 text-uppercase mt-0 font-weight-bold">REFUSES</h5>
+                                            <h4 class="font-500"> {{nombre_demande_refuse_abobo}} <i class="mdi mdi-arrow-down text-danger ml-2"></i></h4>
+                                            <div class="mini-stat-label bg-danger">
+                                                <p class="mb-0"> {{pourcentage_refuse_demande}} %</p>
+                                            </div>
+                                        </div>
+                                        <div class="pt-2">
+                                            <div class="float-right">
+                                                <a href="{% url 'demande_refuse' %}" class="text-white-50"><i class="mdi mdi-arrow-right h5"></i></a>
+                                            </div>
+        
+                                            <p class="text-white-50 mb-0">Voir plus...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat bg-primary text-white">
+                                    <div class="card-body">
+                                        <div class="mb-4">
+                                            <div class="float-left mini-stat-img mr-4">
+                                                <img src="{% static 'assets_dashboard/images/services-icon/04.png' %}" alt="" >
+                                            </div>
+                                            <h5 class="font-14 text-uppercase mt-0 font-weight-bold">Historique</h5>
+                                            <h4 class="font-500">{{historique_demande_abobo}} <i class="mdi mdi-arrow-up text-success ml-2"></i></h4>
+                                            <div class="mini-stat-label bg-warning">
+                                                <p class="mb-0"> 100 %</p>
+                                            </div>
+                                        </div>
+                                        <div class="pt-2">
+                                            <div class="float-right">
+                                                <a href="#" class="text-white-50"><i class="mdi mdi-arrow-right h5"></i></a>
+                                            </div>
+        
+                                            <p class="text-white-50 mb-0">Historique</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <!-- Start of the Statistics of requests section-->
+
+                        <div class="row">
+
+                        <!-- end row -->
+
+
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="mt-0 header-title mb-4"> Voir les 5 dernières demandes </h4>
+                                   
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead style="background-color: blue; color:white;">
+                                              <tr>
+                                                <th scope="col"> NOM ET PRENOMS </th>
+                                                <th scope="col">TELEPHONE ET <br> NUMERO D'ACTE DE NAISSANCE </th>
+                                                <th scope="col">VILLE DE RESIDENCE </th>
+                                                <th scope="col">NOMBRE DE COPIE </th>
+                                                <th scope="col" colspan="2">DATE DE NAISSANCE <br> ET NOM DE <br> LA MERE </th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              {% for element in datatabobo %}
+                                              {% if user.username == "neuman" and element.Mairie_de_demande == "ABOB" and element.status == "ACCEPTE"  %}
+                                              
+                                              <tr style="background-color: orange; color:black; font-weight:bold; font-size:18px">
+                                                <td>{{element.Nom}} <br/>  
+                                                  {{element.Prenoms}}</td>
+                                    
+                                                <td>{{element.Telephone}} <br/> 
+                                                  {{element.Numero_acte_de_naissance}}
+                                                </td>
+                                                
+                                                <td> {{element.Ville_de_residence}}</td>
+                                                <td>{{element.Nombre_de_copie}}</td>
+                                                <td>{{element.Date_de_naissance}} <br>
+                                                  {{element.Nom_et_prenoms_de_la_mere}}
+                                                </td>
+
+                                                <td>
+                                                    <a class="btn btn-sm btn-success" href="{{element.id}}/accepte">ACCEPTER</a>
+                                                      
+                                                  </td>
+                        
+                                                  <td>
+                                                    <a class="btn btn-sm btn-danger" href="{{element.id}}/refuse">SUPPRIMER</a>
+                                                      
+                                                  </td>
+                                               
+                                                      
+                                                  
+                                                
+                                              {% endif %}
+                                              {% endfor %}
+                                              </tr>
+                                    
+                                    
+                                              
+                                    
+                                              {% if user.username == "MAIRIE-ADJAME"  %}
+                                              {% for element in dataExtraitadjame %}
+                                              <tr>
+                                                <td>{{element.Nom}} <br/>  
+                                                  {{element.Prenoms}}</td>
+                                    
+                                                <td>{{element.Telephone}}</td>
+                                                <td>{{element.Numero_Acte_de_Naissance}}</td>
+                                                <td> {{element.Ville_de_Residence}}</td>
+                                                <td>{{element.Nombre_de_copie}}</td>
+                                                <td>{{element.Date_de_naissance}}</td>
+                                                <td>{{element.Telephone}}</td>
+                                                <td>{{element.Nom_de_la_mère}}</td>
+                                               
+                                                  
+                                                
+                                                 
+                                        
+                                                  
+                                                      
+                                                  <td>
+                                                  <a class="btn btn-sm btn-danger" href="{{element.id}}/deleteadjame">SUPPRIMER</a>
+                                                    
+                                                </td>
+                                                {% endfor %}
+                                                {% endif %}
+                                              </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </div>
+                    <!-- container-fluid -->
+
+                </div>
+                <!-- content -->
+
+{% endblock %}

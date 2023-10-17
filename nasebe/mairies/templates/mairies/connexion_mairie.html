@@ -1,0 +1,79 @@
+{% extends 'base_assets_dashboard.html'  %}
+{% load static %}
+
+
+{% block title %}Nasebe - Connexion{% endblock %}
+
+{% load crispy_forms_tags %}
+
+
+
+
+
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong><p>{{ error|escape }}</p></strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong><p>{{ error|escape }}</p></strong>
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+
+{% block content %}
+
+
+    <div class="wrapper-page">
+    
+        <div class="card overflow-hidden account-card mx-3 shadow">
+
+                <div class="bg-primary p-4 text-white text-center position-relative">
+                    <h4 class="font-20 m-b-5">Content de vous revoir !</h4>
+                    <p class="text-white-50 mb-4">Connectez vous à votre compte Nasebe</p>
+                    <a href="{% url 'home' %}" class="logo logo-admin"><img src="{% static 'assets_dashboard/images/logo-sm.png' %}" height="24" alt="logo"></a>
+                </div>
+                <!-- <div class="signup-form"> -->
+                <div class="account-card-content"> 
+
+                        <form method="POST" class="form-horizontal m-t-30 register-form register-form" id="register-form">
+                            {% csrf_token %}
+                            
+
+                            {% csrf_token %}
+                            
+                            {{form|crispy}}
+
+                            
+                        <div class="form-group row m-t-20">
+                                <div class="col-sm-6">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                        <label class="custom-control-label" for="customControlInline">Se souvenir de moi</label>
+                                    </div>
+                                </div>
+                                <div classs="col-sm-6 text-right">
+                                    <input type="submit" value=" Connexion " class="submit btn btn-primary w-md waves-effect waves-light" name="submit" id="submit" />
+                                </div>
+                        </div>
+                    </form>
+                    <div class="form-group m-t-10 mb-0 row">
+                        <div class="col-12 m-t-20">
+                            {% comment %} <a href="{% url 'passwordreset_mail' %}"><i class="mdi mdi-lock"></i> Mot de passe oublié ?</a> {% endcomment %}
+                        </div>
+                    </div>
+                    <div class="m-t-15 text-center">
+                        <p>Si vous n'avez pas de compte <a href="inscription_mairie" class="font-500 text-primary"> Inscrivez vous maintenant </a> </p>
+                    </div>   
+                </div>
+            </div>
+    </div>
+
+    
+{% endblock %}

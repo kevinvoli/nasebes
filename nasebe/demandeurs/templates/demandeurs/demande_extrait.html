@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Demande d'extrait de naissance{% endblock %}
+
+
+
+{% block content %}
+
+
+<!-- <div class="main"> -->
+    <div class="container">
+        <!-- Begin page -->
+        <div id="wrapper">
+    {% include 'messages.html' %}
+
+
+
+                            <!-- ============================================================== -->
+                            <!-- Start right Content here -->
+                            <!--class="bg-primary p-4 text-white text-center position-relative col-10" ============================================================== -->
+            <div class="content-page shadow">
+                <!-- Start content -->
+                
+                <div class="content shadow">
+                    
+                        <!-- end row base_assets_dashboard.html -->
+                        <br> <br><br> <br><br> 
+                        <center>
+                        <div  style="width: 70%; background-color:blue; ">
+                            
+                           <br><br> 
+                            <p class="text-white-50 mb-4" style="font-size: 40px; color:white;">
+                                
+                                Demander votre extrait en quelque clics.
+                            </p>
+                            <br><br>
+                        </div>
+                    </center> <br>
+                        {% load crispy_forms_tags %}
+                        <div >
+                        <div class="row"  style="width: 50%; margin-left: 300px; ">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="card-body">
+                                        
+        
+
+                                        <form class="form-horizontal m-t-30 register-form"  method="POST" enctype="multipart/form-data" novalidate>                        
+                                        
+                                            {%   csrf_token    %}       
+                                                    
+                                            <div class="form-group">
+                                            <p style="color:green;" > {{message}} </p>
+                
+                                                {%   csrf_token    %}                 
+                                                <!-- {{ form.as_p }} -->      
+                                                {{ form|crispy }}          
+                                            </div>
+                                            <!-- button group start-->
+                                            <div class="form-group row">
+                                                <div class="col-sm-10">
+                                                    <input type="submit" value="Demander" class="btn btn-primary waves-effect waves-light mr-1 submit" name="submit" id="submit" data-buttonname="btn-secondary">
+                                                    <input type="reset" value="Annuler" class="btn btn-danger waves-effect waves-light mr-1 ml-5" data-buttonname="btn-secondary">
+                                                </div>
+                                            </div>   
+                                            <!-- button group end--> 
+                                        </form>
+
+                                    </div> <!-- end card-body -->
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                    </div>
+    
+
+                </div>
+                    <!-- container-fluid -->
+
+            </div>
+                <!-- content -->
+
+     
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+
+    </div>
+<!-- </div> -->
+
+
+{% endblock %}

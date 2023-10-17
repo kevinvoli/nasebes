@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+
+{% block  title %} REFUSER LA DEMANDE {% endblock %}
+
+
+{% block content %}
+
+
+<div class="main">
+    <!-- Create a Form -->
+    <form method="POST" class="post-form" novalidate>
+        <!-- Security token by Django -->
+        {% csrf_token %}
+       <div class="container">
+        <div class="row">
+          <h2> {{b}}</h2>
+         
+
+
+        <h1>VOULEZ VOUS VRAIMENT REFUSER   ?</h1>
+
+        
+       
+        
+
+        
+      <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">  <input type="submit" class="btn btn-sm btn-success" style="width: 100%; height: 80px; text-align: center; font-size : 30px; " value="OUI" /> </div>
+      <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6" ><a href="../../nouvelle_demande" class="btn btn-sm btn-danger" style="width: 100%; height: 80px; text-align: center; font-size: 30px;"> <center>NON</center> </a> </div>  
+
+    </div></div>
+    </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,442 @@
+﻿{% load static %}
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible"  content="IE=edge">
+<title>{% block title %}Nasebe{% endblock %}</title>
+<meta name="keywords" content="themeforest template" />
+<meta name="description" content="best responsive html template in themeforest">
+<meta name="author" content="codelayers">
+
+<!-- Mobile view -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Favicon --> 
+<link rel="shortcut icon" href="{% static 'assets_dem/images/favicon.ico' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets_dem/js/bootstrap/bootstrap.min.css' %}">
+
+
+<!-- Google fonts  -->
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Yesteryear" rel="stylesheet"> 
+
+
+<!-- Template's stylesheets -->
+<link rel="stylesheet" href="{% static 'assets_dem/js/megamenu/stylesheets/screen.css' %}">
+<link rel="stylesheet" href="{% static 'assets_dem/css/theme-default.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'assets_dem/js/loaders/stylesheets/screen.css' %}">
+<link rel="stylesheet" href="{% static 'assets_dem/css/corporate.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'assets_dem/css/shortcodes.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'assets_dem/fonts/font-awesome/css/font-awesome.min.css' %}" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'assets_dem/fonts/Simple-Line-Icons-Webfont/simple-line-icons.css' %}" media="screen" />
+<link rel="stylesheet" href="{% static 'assets_dem/fonts/et-line-font/et-line-font.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets_dem/js/revolution-slider/css/settings.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets_dem/js/revolution-slider/css/layers.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets_dem/js/revolution-slider/css/navigation.css' %}">
+<link href="{% static 'assets_dem/js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+<link href="{% static 'assets_dem/js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'assets_dem/js/cubeportfolio/cubeportfolio.min.css' %}">
+<link href="{% static 'assets_dem/js/accordion/css/smk-accordion.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'assets_dem/js/ytplayer/ytplayer.css' %}" />
+<link href="{% static 'assets_dem/js/tabs/css/responsive-tabs.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'assets_dem/js/jFlickrFeed/style.css' %}" />
+<link rel="stylesheet" href="{% static 'assets_dem/js/parallax/main.css' %}">
+<link rel='stylesheet' type='text/css' href="{% static 'assets_dem/js/offcanvas/offcanvas.css' %}" />
+<link href="{% static 'assets_dem/js/animations/css/animations.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- Template's stylesheets END -->
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- Style Customizer's stylesheets -->
+<link rel="stylesheet" type="text/css" href="{% static 'assets_dem/js/style-customizer/css/style-customizer.css' %} ">
+<link rel="stylesheet" type="text/css" href="{% static 'assets_dem/assets_dem/js/style-customizer/css/spectrum.css' %}">
+<link rel="stylesheet/less" type="text/css" href="{% static 'assets_dem/less/skin.less' %}">
+<!-- Style Customizer's stylesheets END -->
+
+<!-- Skin stylesheet -->
+<style>
+  .card {
+    border: none;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(236, 236, 241, 0.44);
+            box-shadow: 0px 0px 13px 0px rgba(236, 236, 241, 0.44);
+    margin-bottom: 30px;
+  }
+</style>
+
+</head>
+
+
+<body>
+
+<div class="wrapper-boxed">
+  <div class="site-wrapper">
+  
+  <div class="topbar light topbar-padding">
+      <div class="container">
+      <div class="row nopadding">
+        <div class="topbar-left-items">
+          <ul class="toplist toppadding pull-left paddtop1 roboto">
+            <li class="rightl">BIENVENUE SUR NASEBE</li>
+          </ul>
+        </div>
+        <!--end left-->
+        
+        <div class="topbar-right-items pull-right">
+          <ul class="toplist toppadding">
+            <li><a href="connexion_mairie">CONNEXION</a> &nbsp; |</li>
+            <li><a href="inscription_mairie">INSCRIPTION</a> &nbsp; |</li>
+            <li><a target="_blank" href="https://www.facebook.com/codelayers"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li class="last"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div><!-- end top bar -->
+  
+    <div class="col-md-12 nopadding">
+      <div class="header-section white style1 links-dark pin-style">
+        <div class="container">
+          <div class="mod-menu">
+            <div class="row">
+              <div class="col-sm-2"> <a href="index-1.html" title="" class="logo style-2 mar-4"> <img src="{% static 'assets_dashboard/images/logo.jpg' %}" style="width: 60%;" alt=""> </a> </div>
+              <div class="col-sm-10">
+                <div class="main-nav">
+                  <ul class="nav navbar-nav top-nav">
+                    <li class="search-parent"> <a href="javascript:void(0)" title="" class="m-link"><i aria-hidden="true" class="fa fa-search"></i></a>
+                      <div class="search-box ">
+                        <div class="content">
+                          <div class="form-control">
+                            <input type="text" placeholder="Rechercher..." />
+                            <a href="#" class="search-btn mar-2"><i aria-hidden="true" class="fa fa-search"></i></a> </div>
+                          <a href="#" class="close-btn mar-1">x</a> </div>
+                      </div>
+                    </li>
+
+                    <li class="visible-xs menu-icon"> <a href="javascript:void(0)" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false"> <i aria-hidden="true" class="fa fa-bars"></i> </a> </li>
+                  </ul>
+                  <div id="menu" class="collapse">
+                    <ul class="nav navbar-nav">
+                      <li class="active"> <a href="{% url 'home' %}">Accueil</a> <span class="arrow"></span>
+
+                      </li>
+                      <li> <a href="{% url 'demande_extrait' %}" class="m-link">Demande d'Extrait</a> <span class="arrow"></span>
+                      </li>
+
+                      <li> <a href="#" class="m-link">Espaces</a> <span class="arrow"></span>
+                            <ul class="dm-align-2">
+                              <li> <a href="{% url 'espacemairie' %}" class="linkcaps">Espace Mairie <span class="sub-arrow dark pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> <span class="arrow"></span>
+                              </li>
+                              <li> <a href="#" class="linkcaps">Espace Demandeur <span class="sub-arrow dark pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> <span class="arrow"></span>
+                              </li>
+                            </ul>
+                      </li>
+
+                      <li class="mega-menu"> <a href="services" class="m-link">Services</a> <span class="arrow"></span>
+                      </li>
+
+
+                      <li class="right"> <a href="{% url 'contact' %}" class="m-link">Contact</a> <span class="arrow"></span>
+    
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end menu--> 
+      
+    </div>
+    <!--end menu-->
+    
+    
+    {% block content %}
+  
+
+
+    
+    {% endblock %}
+
+ 
+
+
+<footer class="section-dark sec-tpadding-2">
+  <div class="container sec-bpadding-6">
+    
+    <div class="row">
+      <div class="col-md-3 col-sm-12 colmargin clearfix margin-bottom">
+        <div class="fo-map">
+        <div class="footer-logo"><img src="images/logo/logo.png" alt=""/></div>       
+        <address>
+            <strong class="text-white opacity-5">Addresse:</strong>
+            <br />
+            <p class="text-white opacity-5">71 Avenue Amadou Kourouma, 
+              <br />
+              Abidjan, Cocody
+            </p>
+        </address>
+    
+        <span class="text-white opacity-5"><strong>Telephone:</strong> + 225 11 22 33 44 55</span><br>
+        <span><strong class="text-white opacity-5">Email:</strong> <a href="mailto:email@example.com" class="opacity-link-light">nasebe@example.com</a> </span><br>
+        <!-- <span class="text-white opacity-5"><strong>Fax:</strong> + 1 (234) 567 8902</span> -->
+    </div>
+      </div>
+      <!--end item-->
+      
+      <div class="col-md-3 col-sm-12 col-xs-12 bmargin clearfix margin-bottom">
+        <div class="item-holder">
+          <h5 class="text-white uppercase less-mar3 font-weight-7">Services</h5>
+          <div class="clearfix"></div>
+          
+          <p><a href=" {% url 'demande_extrait' %}" class="opacity-link-light">Demander un extrait</a></p>
+          
+          <div class="divider-line light solid light opacity-1 margin-top-1 margin-bottom-1"></div>
+          
+          <p><a href="{% url 'verification' %}" class="opacity-link-light">Vérifier votre demande</a></p>
+          
+          <div class="divider-line light solid light opacity-1 margin-top-1 margin-bottom-1"></div>
+          
+          <p><a href="{% url 'reclamation' %}" class="opacity-link-light"> Effectuer vos réclamations</a></p>
+          
+          <div class="divider-line light solid light opacity-1 margin-top-1 margin-bottom-1"></div>
+          
+          
+        </div>
+      </div>
+      <!--end item-->
+      
+      <div class="col-md-3 col-xs-12 clearfix margin-bottom">
+        <h5 class="text-white uppercase less-mar3 font-weight-7">Liens Utiles</h5>
+        <div class="clearfix"></div>
+        <ul class="list-padding-1 text-white font-weight-5">
+            <li><a href="{% url 'espacemairie' %}" class="opacity-link-light">Espace mairie</a></li>
+            <li><a href="#" class="opacity-link-light">Espace demandeur</a></li>
+            <li><a href="{% url 'services' %}" class="opacity-link-light">Services</a></li>
+            <li><a href="{% url 'contact' %}" class="opacity-link-light">Contact</a></li>
+        </ul>
+      </div>
+      <!--end item-->
+      
+      <div class="col-md-3 col-xs-12 clearfix margin-bottom">
+        <h5 class="text-white uppercase less-mar3 font-weight-7">NASEBE</h5>
+        <div class="clearfix margin-bottom-1"></div>
+               
+        <ul id="basicuse" class="thumbs"></ul>
+      </div>
+      <!--end item-->
+      
+      <div class="clearfix"></div>
+      <div class="col-divider-margin-2"></div>
+    </div>
+    
+    </div>
+    
+    
+    <div class="container-fluid section-dark two sec-moreless-padding">
+		<div class="container">
+        
+			<div class="col-md-6 col-sm-12 col-xs-12 margin-bottom text-left respo text-white opacity-5">Copyright © 2023 <a href="https://1.envato.market/apare-html-by-codelayers">Nasebe</a> Par <a href="https://1.envato.market/codelayers">Nasebe</a> | Tous droits réservés.</div>
+            
+			<div class="col-md-6 col-sm-12 col-xs-12 text-right respo">
+                <ul class="footer-social-icons round">
+                  <li><a target="_blank" class="twitter" href="https://twitter.com/codelayers"><i class="fa fa-twitter margin-top-1"></i></a></li>
+                  <li><a target="_blank" href="https://www.facebook.com/codelayers"><i class="fa fa-facebook margin-top-1"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus margin-top-1"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin margin-top-1"></i></a></li>
+                  <li><a href="#"><i class="fa fa-dribbble margin-top-1"></i></a></li>
+                </ul>
+            </div>
+            
+    	</div>
+
+    </div>
+    
+  
+</footer>
+    
+<a href="#" class="scrollup">Scroll</a><!-- end scroll to top of the page-->
+    
+</div><!--end site wrapper--> 
+</div><!--end wrapper boxed--> 
+
+  <!-- Scripts --> 
+  <script src="{% static 'assets_dem/js/jquery/jquery.js' %}"></script> 
+  <script src="{% static 'assets_dem/js/bootstrap/bootstrap.min.js' %}"></script> 
+ 
+<!-- Scripts END --> 
+ 
+
+  <!-- Template scripts --> 
+  <script src="{% static 'assets_dem/js/megamenu/js/main.js' %}"></script> 
+  <script src="{% static 'assets_dem/js/owl-carousel/owl.carousel.js' %}"></script> 
+  <script src="{% static 'assets_dem/js/owl-carousel/custom.js' %}"></script> 
+  <script type="text/javascript" src="{% static 'assets_dem/js/ytplayer/jquery.mb.YTPlayer.js' %}"></script> 
+  <script type="text/javascript" src="{% static 'assets_dem/js/ytplayer/elementvideo-custom.js' %}"></script> 
+  <script type="text/javascript" src="{% static 'assets_dem/js/ytplayer/play-pause-btn.js' %}"></script> 
+  <script type="text/javascript" src="{% static 'assets_dem/js/cubeportfolio/jquery.cubeportfolio.min.js' %}"></script> 
+  <script type="text/javascript" src="{% static 'assets_dem/js/cubeportfolio/main-mosaic3.js' %}"></script> 
+  <script src="{% static 'assets_dem/js/accordion/js/smk-accordion.js' %}"></script> 
+  <script src="{% static 'assets_dem/js/accordion/js/custom.js' %}"></script> 
+  <script src="{% static 'assets_dem/js/animations/js/animations.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'assets_dem/js/tabs/js/responsive-tabs.min.js' %}" type="text/javascript"></script> 
+  <script src="{% static 'assets_dem/js/parallax/parallax-background.min.js' %}"></script>
+  <script>
+	(function ($) {
+		$('.parallax').parallaxBackground();
+
+	})(jQuery);
+</script>
+
+<script src="{% static 'assets_dem/js/offcanvas/offcanvas.js' %}"></script>
+  
+<!-- REVOLUTION JS FILES --> 
+<script type="text/javascript" src="{% static 'assets_dem/js/revolution-slider/js/jquery.themepunch.tools.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets_dem/js/revolution-slider/js/jquery.themepunch.revolution.min.js' %}"></script> 
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+(Load Extensions only on Local File Systems ! 
+The following part can be removed on Server for On Demand Loading) --> 
+<script type="text/javascript" src="{% static 'assets_dem/js/revolution-slider/js/extensions/revolution.extension.actions.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets_dem/js/revolution-slider/js/extensions/revolution.extension.carousel.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets_dem/js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets_dem/js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets_dem/js/revolution-slider/js/extensions/revolution.extension.migration.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets_dem/js/revolution-slider/js/extensions/revolution.extension.navigation.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets_dem/js/revolution-slider/js/extensions/revolution.extension.parallax.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets_dem/js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js' %}"></script> 
+<script type="text/javascript" src="{% static 'assets_dem/js/revolution-slider/js/extensions/revolution.extension.video.min.js' %}"></script>
+
+
+
+<script type="text/javascript">
+	var tpj=jQuery;			
+	var revapi4;
+	tpj(document).ready(function() {
+	if(tpj("#rev_slider").revolution == undefined){
+	revslider_showDoubleJqueryError("#rev_slider");
+	}else{
+		revapi4 = tpj("#rev_slider").show().revolution({
+		sliderType:"standard",
+		jsFileLocation:"js/revolution-slider/js/",
+		sliderLayout:"auto",
+		dottedOverlay:"none",
+		delay:9000,
+		navigation: {
+		keyboardNavigation:"off",
+		keyboard_direction: "horizontal",
+		mouseScrollNavigation:"off",
+		onHoverStop:"off",
+		arrows: {
+		style:"uranus",
+		enable:true,
+		hide_onmobile:false,
+		hide_under:100,
+		hide_onleave:true,
+		hide_delay:200,
+		hide_delay_mobile:1200,
+		tmp:'',
+		left: {
+		h_align:"left",
+		v_align:"center",
+		h_offset:35,
+		v_offset:0
+		},
+		right: {
+		h_align:"right",
+		v_align:"center",
+		h_offset:35,
+		v_offset:0
+		}
+		}
+		,
+		touch:{
+		touchenabled:"on",
+		swipe_threshold: 75,
+		swipe_min_touches: 1,
+		swipe_direction: "horizontal",
+		drag_block_vertical: false
+	}
+	,
+										
+										
+										
+	},
+		viewPort: {
+		enable:true,
+		outof:"pause",
+		visible_area:"80%"
+	},
+	
+	responsiveLevels:[1240,1024,778,480],
+	gridwidth:[1240,1024,778,480],
+	 gridheight: [650,750,500,360],
+	lazyType:"smart",
+		parallax: {
+		type:"mouse",
+		origo:"slidercenter",
+		speed:2000,
+		levels:[2,3,4,5,6,7,12,16,10,50],
+		},
+	shadow:0,
+	spinner:"off",
+	stopLoop:"off",
+	stopAfterLoops:-1,
+	stopAtSlide:-1,
+	shuffle:"off",
+	autoHeight:"off",
+	hideThumbsOnMobile:"off",
+	hideSliderAtLimit:0,
+	hideCaptionAtLimit:0,
+	hideAllCaptionAtLilmit:0,
+	disableProgressBar:"on",
+	debugMode:false,
+		fallbacks: {
+		simplifyAll:"off",
+		nextSlideOnWindowFocus:"off",
+		disableFocusListener:false,
+		}
+	});
+	}
+	});	/*ready*/
+</script> 
+
+
+<script src=""></script>
+<script src="{% static 'assets_dem/js/jFlickrFeed/jflickrfeed.min.js' %}"></script>
+<script>
+$('#basicuse').jflickrfeed({
+limit: 6,
+qstrings: {
+id: '133294431@N08'
+},
+itemTemplate: 
+'<li>' +
+'<a href="{{image_b}}"><img src="{{image_s}}" alt="{{title}}" /></a>' +
+'</li>'
+});
+</script>
+  
+<script>
+    $(window).load(function(){
+      setTimeout(function(){
+
+        $('.loader-live').fadeOut();
+      },1000);
+    })
+
+</script>
+
+<script src="{% static 'assets_dem/js/functions/functions.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+Le projet doit être composé d'abord de 2 apps :
+    - La première est NasebeApp qui est consacré à l'espace maire, et à toutes les opérations incluant
+                - Inscription 
+                - Connexion
+                - Deconnexion
+                - Reinitialisation Mot de passe
+                - Changer statut d'une demande (NON_TRAITE, TRAITE, REJETE, DELIVRE)
+                - 
+    - La deuxième est DemandeurApp qui est consacré à la demande d'extrait, et à toutes les opérations incluant
+                - Créer un compte
+                - Demander un extrait avec intégration de paiement
+                - Verifier le traitement de l'extrait (avec possibilité de modification)
+                - Effectuer une reclamation
+                - 
+Commons :
+            - Inscription 
+            - Connexion
+            - Deconnexion
+            - Reinitialisation Mot de passe
+            - Editer profil
+
+Specifiques :
+            - Un dossier "templates" va regrouper les templates communs aux apps
+            - Des dossiers "nom_de_lapp/templates/nom_de_lapp" sont créés pour rassembler les templates specifiques à l'application
+            - Dans le dossier 'Static', il aura deux "asset" pricipaux 
+            - Il aura 2 "base". Un dans chaque templates
+            - Templates de pages simples : aparehtml-10
+            - Templates de dashboard : veltrixadmin-21 \Veltrix_v2.1\HTML\Layout-1\vertical
+            - l'index qui sera dans demandeurs sera l'index de tout le site et sera dans le templates principal
+

@@ -1,0 +1,50 @@
+
+{% extends 'base.html'  %}
+
+
+{% block content %}
+{% load static %}
+
+<br/><br/>
+<section style="background-color: rgb(49, 34, 255);">
+<div class="main">
+    <div class="container">
+            
+                <form method="POST" class="register-form" id="register-form">
+                    <h2 style="color: blue; font-size:32px;"> VERRIFIER LE TRAITEMENT DE VOTRE DEMANDE </h2> <hr/>
+                    <p style="color:red;font-size:19px;">Remplisser le formulaire ci dessous pour verrifier le traitement de votre demande .</p>
+
+
+                    <br/><br/>
+                    
+
+                        
+                            <div class="form-row">
+                                <div class="form-group" style="width: 100%;">
+                                    <label for="birthnumber">Numero d'acte de naissance</label>
+                                    <input type="text" name="birthnumber" id="birthnumber" style="padding: 22px;" required/>
+                                </div>
+                                </div>
+
+
+                                <div class="form-row">
+                                    <div class="form-group" style="width: 100%;">
+                                        <label for="date">Date de naissance</label>
+                                        <input type="date" name="date" id="date" style="padding: 22px;" required/>
+                                    </div>
+                                    </div>
+
+                                        
+                    
+                    <div >
+                        <input type="submit" value=" VERRIFIER VOTRE DEMANDE " class="submit" name="submit" id="submit" style="width: 100%;" />
+                    </div>
+                </form>
+            
+        
+    </div>
+
+</div>
+</section>
+
+  {% endblock %}

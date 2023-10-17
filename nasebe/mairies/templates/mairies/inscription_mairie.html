@@ -1,0 +1,85 @@
+{% extends 'base_assets_dashboard.html'  %}
+
+{% load static %}
+
+{% block title %}Nasebe - Inscription{% endblock %}
+
+
+{% include 'common/messages.html' %}
+
+{% comment %} Message error display {% endcomment %}
+{% if form.errors %}
+{% if field in form %}
+    {% if error in field.errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endif %}
+{% endif %}
+{% if error in form.non_field_errors %}
+    <div class="alert alert-danger">
+        <strong>{{ error|escape }}</strong>
+    </div>
+{% endif %}
+{% endif %}    
+{% comment %} Message error display end  {% endcomment %}
+
+{% block content %}
+
+            
+            <div class="wrapper-page">
+                
+
+                <div class="card overflow-hidden account-card mx-3 shadow">
+                    
+                    <div class="bg-primary p-4 text-white text-center position-relative">
+                            <h4 class="font-20 m-b-5">Inscription Mairie</h4>
+                            <p class="text-white-50 mb-4">Obtenez votre compte NaSebe gratuit maintenant.</p>
+                            <a href="{% url 'home' %}" class="logo logo-admin"><img src="../static/assets_v/images/logo-sm.png" height="24" alt="logo"></a>
+                    </div>
+                    <div class="account-card-content ">  
+
+                        {% comment %} <form class="form-horizontal m-t-30 register-form post-form" id="register-form" method="POST" action="{% url 'signup' %}" method="POST" novalidate>                         {% endcomment %}
+                        <form class="form-horizontal m-t-30 register-form post-form" id="register-form" method="POST" action="{% url 'inscription_mairie' %}" method="POST" novalidate>                        
+                            <div class="form-row">
+
+                                {% load crispy_forms_tags %}
+                                <div class="form-group">   
+            
+                                       {%   csrf_token    %}                 
+                                          <!-- {{ form.ass_p }} -->      
+                                          {{ form|crispy }}          
+                                  </div>
+                              </div>
+                              <div class="row">
+
+                            <div class="form-group row m-t-20">
+                                <div class="col-12 text-right">
+                                    <input type="submit" value=" INSCRIPTION " class="btn btn-primary w-md waves-effect waves-light" name="submit" id="submit" />                        
+                                </div>
+                            </div>
+
+                            
+                            <div class="form-group m-t-10 mb-0 row">
+                                <div class="col-12 m-t-20">
+                                    {% comment %} <p class="mb-0">By registering you agree to the Veltrix <a href="#" class="text-primary">Terms of Use</a></p> {% endcomment %}
+                                    <p class="mb-0"> &nbsp; &nbsp; Avez-vous déjà un compte ?  &nbsp; <a href="connexion_mairie" class="font-500 text-primary"> Connectez-vous </a> </p>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+ 
+
+            </div>
+
+
+{% endblock %}
+
+
+
+
+            <!-- end wrapper-page -->
+
+

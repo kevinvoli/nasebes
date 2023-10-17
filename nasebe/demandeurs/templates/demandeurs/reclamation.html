@@ -1,0 +1,74 @@
+
+{% extends 'basereclamation.html'  %}
+{% load static %}
+
+
+{% block title %}Réclamation{% endblock %}
+
+{% block content %}
+
+
+{% include 'messages.html' %}
+
+
+<section style="background-color: rgb(207, 207, 224);">
+<div class="main">
+    <div class="container">
+        
+           
+
+   
+        <div class="wrapper-page">
+
+            <div class="card overflow-hidden account-card mx-3">
+                
+                <div class="bg-primary p-4 text-white text-center position-relative">
+                    <h4 class="font-20 mb-4">FAIRE UNE RECLAMATION PAR RAPPORT A VOTRE DEMANDE </h4>
+                    <a href="index.html" class="logo logo-admin"><img src="{% static 'assets_dashboard/images/logo.jpg' %}" style="width: 150%; border-radius:10%"/></a>
+                </div>
+
+                <div class="account-card-content"> 
+
+                    <div class="alert alert-success m-t-30 text-center" role="alert">
+                        Envoyez votre réclamation. Elle sera traitée rapidement car votre bien être est notre prioritée.!
+                    </div> <br><br>
+                    <p style="color:green;" > {{message}} </p>
+            
+                <form method="POST" class="form-horizontal m-t-30 register-form" id="register-form">
+                    {% load crispy_forms_tags %}
+
+
+
+
+                        {%   csrf_token    %} 
+
+                        <div class="form-group">   
+                
+                        {{ form|crispy }}
+                
+                        
+
+                        <!-- <div  >
+                            <input type="submit" value=" ENVOYER VOTRE RECLAMATION   " class="submit" name="submit" id="submit" style="width: 100%;" />
+                        </div>
+                         -->
+
+                        <div class="form-group row"  style="margin-left: 2em;">
+                            <div class="col-sm-10">
+                                <input type="submit" value="ENVOYER VOTRE RECLAMATION" class="btn btn-primary waves-effect waves-light mr-1 m-auto submit" name="submit" id="submit" data-buttonname="btn-secondary"  style="width: 100%; " >
+
+                                <!-- <input type="reset" value="Annuler" class="btn btn-danger waves-effect waves-light mr-1 ml-5" data-buttonname="btn-secondary"> -->
+
+                            </div>
+                        </div>    
+
+                
+                </form>
+            
+        
+    </div>
+
+</div>
+</section>
+
+  {% endblock %}

@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>{% block title %}{% endblock %}</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Themesbrand" name="author" />
+        <link rel="shortcut icon" href="{% static 'assets_dashboard/images/favicon.ico' %}">
+
+        <!--Chartist Chart CSS -->
+        <link rel="stylesheet" href="{% static 'assets_dashboard/plugins/chartist/css/chartist.min.css' %}" rel="stylesheet">
+        
+        <link href="{% static 'assets_dashboard/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'assets_dashboard/css/metismenu.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'assets_dashboard/css/icons.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static '../static/assets_dashboard/css/style.css' %}" rel="stylesheet" type="text/css">
+  {% comment %} <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"> {% endcomment %}
+    
+    </head>
+
+    <body style="background-image: url(b_g.jpg)">
+
+
+        <!-- Begin page -->
+
+        <div class="home-btn d-none d-sm-block">
+            <a href="{% url 'home' %}" class="text-dark"><i class="fas fa-home h2"></i></a>
+        </div>
+        
+
+            {% block content %}
+            
+          
+
+
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+                <!-- Start content -->
+            {% endblock %}
+                <!-- content -->
+
+
+            {% comment %} {% block footer %} {% endcomment %}
+
+                <footer class="footer position-relative" style="left: 0px;">
+                    © 2023 Nasebe <span class="d-none d-sm-inline-block"> - Créé avec <i class="mdi mdi-heart text-danger"></i> par Team Tech</span>.
+                </footer>
+            {% comment %} {% endblock %} {% endcomment %}
+            
+
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+        <!-- END wrapper -->
+
+
+        <!-- jQuery  -->
+        <script src="{% static 'assets_dashboard/js/jquery.min.js'   %}"></script>
+        <script src="{% static 'assets_dashboard/js/bootstrap.bundle.min.js'   %}"></script>
+        <script src="{% static 'assets_dashboard/js/metisMenu.min.js'   %}"></script>
+        <script src="{% static 'assets_dashboard/js/jquery.slimscroll.js'   %}"></script>
+        <script src="{% static 'assets_dashboard/js/waves.min.js'   %}"></script>
+
+        <!--Chartist Chart-->
+        <script src="{% static 'assets_dashboard/plugins/chartist/js/chartist.min.js'   %}"></script>
+        <script src="{% static 'assets_dashboard/plugins/chartist/js/chartist-plugin-tooltip.min.js'   %}"></script>
+
+        <!-- peity JS -->
+        <script src="{% static 'assets_dashboard/plugins/peity-chart/jquery.peity.min.js' %}"></script>
+
+        <script src="{% static 'assets_dashboard/pages/dashboard.js' %}"></script>
+
+        <!-- App js -->
+        <script src="{% static 'assets_dashboard/js/app.js' %}"></script>
+        
+
+        <script>
+            setTimeout(function() {
+                if ($('#msg').length > 0){
+                    $('#msg').remove();
+                }
+            }, 3000)
+        </script>
+
+
+    </body>
+
+</html>
