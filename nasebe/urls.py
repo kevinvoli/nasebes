@@ -21,9 +21,12 @@ from mairies.views import inscription_mairie, connexion_mairie, espacemairie, ch
 from demandeurs.views import services
 from demandeurs.views import demande_extrait, verification, reclamation, contact
 from django.contrib.auth import views as auth_view
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns 
+
 
 
 urlpatterns = [
+    
     path('', home, name='home'), # vue principale du site
     path('admin/', admin.site.urls),
     path('services', services, name='services'), # vue services du site
