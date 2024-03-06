@@ -16,7 +16,7 @@
 <!-- Favicon --> 
 <link rel="shortcut icon" href="{% static 'assets_dem/images/favicon.ico' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'assets_dem/js/bootstrap/bootstrap.min.css' %}">
-
+<link rel="stylesheet" type="text/css" href="{% static 'assets_dem/style.css' %}">
 
 <!-- Google fonts  -->
 
@@ -90,7 +90,7 @@
         <div class="topbar-right-items pull-right">
           <ul class="toplist toppadding">
             <li><a href="connexion_mairie">CONNEXION</a> &nbsp; |</li>
-            <li><a href="inscription_mairie">INSCRIPTION</a> &nbsp; |</li>
+            <li><a href="#">INSCRIPTION</a> &nbsp; |</li>
             <li><a target="_blank" href="https://www.facebook.com/codelayers"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -107,7 +107,7 @@
         <div class="container">
           <div class="mod-menu">
             <div class="row">
-              <div class="col-sm-2"> <a href="index-1.html" title="" class="logo style-2 mar-4"> <img src="{% static 'assets_dashboard/images/logo.jpg' %}" style="width: 60%;" alt=""> </a> </div>
+              <div class="col-sm-2"> <a href="{% url 'home' %}" > <br> <h1 style="font-weight: bold; color: blue; font-size: 40px ; font-family: Verdana, Geneva, Tahoma, sans-serif;"> NASEBE </h1> </a> </div>
               <div class="col-sm-10">
                 <div class="main-nav">
                   <ul class="nav navbar-nav top-nav">
@@ -125,8 +125,8 @@
                   </ul>
                   <div id="menu" class="collapse">
                     <ul class="nav navbar-nav">
-                      <li class="active"> <a href="{% url 'home' %}">Accueil</a> <span class="arrow"></span>
-
+                      <li class="active"> <a href="{% url 'home' %}" >Accueil</a> <span class="arrow"></span>
+                        
                       </li>
                       <li> <a href="{% url 'demande_extrait' %}" class="m-link">Demande d'Extrait</a> <span class="arrow"></span>
                       </li>
@@ -135,12 +135,12 @@
                             <ul class="dm-align-2">
                               <li> <a href="{% url 'espacemairie' %}" class="linkcaps">Espace Mairie <span class="sub-arrow dark pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> <span class="arrow"></span>
                               </li>
-                              <li> <a href="#" class="linkcaps">Espace Demandeur <span class="sub-arrow dark pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> <span class="arrow"></span>
-                              </li>
+                              <!-- <li> <a href="#" class="linkcaps">Espace Demandeur <span class="sub-arrow dark pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> <span class="arrow"></span>
+                              </li> -->
                             </ul>
                       </li>
 
-                      <li class="mega-menu"> <a href="services" class="m-link">Services</a> <span class="arrow"></span>
+                      <li class="mega-menu"> <a href="{% url 'services' %}" class="m-link">Services</a> <span class="arrow"></span>
                       </li>
 
 
@@ -148,6 +148,7 @@
     
                       </li>
                     </ul>
+                    
                   </div>
                 </div>
               </div>
@@ -160,7 +161,7 @@
     </div>
     <!--end menu-->
     
-    
+ 
     {% block content %}
   
 
@@ -181,14 +182,14 @@
         <address>
             <strong class="text-white opacity-5">Addresse:</strong>
             <br />
-            <p class="text-white opacity-5">71 Avenue Amadou Kourouma, 
+            <p class="text-white opacity-5">Abidjan , Cocody, 
               <br />
               Abidjan, Cocody
             </p>
         </address>
     
-        <span class="text-white opacity-5"><strong>Telephone:</strong> + 225 11 22 33 44 55</span><br>
-        <span><strong class="text-white opacity-5">Email:</strong> <a href="mailto:email@example.com" class="opacity-link-light">nasebe@example.com</a> </span><br>
+        <span class="text-white opacity-5"><strong>Telephone:</strong> + 225 01 53 64 64 51  /  + 225 01 53 91 91 34 </span><br>
+        <span><strong class="text-white opacity-5">Email:</strong> <a href="nasebetech@gmail.com" class="opacity-link-light">nasebetech@gmail.com</a> </span><br>
         <!-- <span class="text-white opacity-5"><strong>Fax:</strong> + 1 (234) 567 8902</span> -->
     </div>
       </div>
@@ -203,7 +204,7 @@
           
           <div class="divider-line light solid light opacity-1 margin-top-1 margin-bottom-1"></div>
           
-          <p><a href="{% url 'verification' %}" class="opacity-link-light">Vérifier votre demande</a></p>
+          <p><a href="#" class="opacity-link-light">Vérifier votre demande</a></p>
           
           <div class="divider-line light solid light opacity-1 margin-top-1 margin-bottom-1"></div>
           
@@ -230,7 +231,11 @@
       
       <div class="col-md-3 col-xs-12 clearfix margin-bottom">
         <h5 class="text-white uppercase less-mar3 font-weight-7">NASEBE</h5>
-        <div class="clearfix margin-bottom-1"></div>
+        <div class="clearfix margin-bottom-1">
+          <img style="width: 80%;" src="{% static 'assets_dashboard/images/logo.jpg' %}" alt="" ">
+        </div>
+
+        
                
         <ul id="basicuse" class="thumbs"></ul>
       </div>
@@ -246,7 +251,7 @@
     <div class="container-fluid section-dark two sec-moreless-padding">
 		<div class="container">
         
-			<div class="col-md-6 col-sm-12 col-xs-12 margin-bottom text-left respo text-white opacity-5">Copyright © 2023 <a href="https://1.envato.market/apare-html-by-codelayers">Nasebe</a> Par <a href="https://1.envato.market/codelayers">Nasebe</a> | Tous droits réservés.</div>
+			<div class="col-md-6 col-sm-12 col-xs-12 margin-bottom text-left respo text-white opacity-5">Copyright © 2024 <a href="https://1.envato.market/apare-html-by-codelayers">Nasebe</a> Par <a href="https://1.envato.market/codelayers">Nasebe</a> | Tous droits réservés.</div>
             
 			<div class="col-md-6 col-sm-12 col-xs-12 text-right respo">
                 <ul class="footer-social-icons round">

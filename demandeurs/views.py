@@ -22,7 +22,7 @@ def home(request):
 # SERVICES TEMPLATE VIEW
 
 ######################################
-@login_required
+
 def services(request):
     return render(request, "services.html" )
 

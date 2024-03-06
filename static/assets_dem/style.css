@@ -1,0 +1,5 @@
+
+/* Style de survol en CSS intégré */
+ ul li a:hover {
+  color: blue; /* Nouvelle couleur au survol */
+}

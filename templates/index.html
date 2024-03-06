@@ -22,7 +22,7 @@
               <li data-index="rs-1" data-transition="fade" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="" data-description=""> 
                 
                 <!-- MAIN IMAGE --> 
-                <img src="{% static 'assets_dashboard/images/baniere1.jpg' %}" alt=""  data-bgposition="center center" data-kenburns="off" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 -500" data-offsetend="0 500" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+                <img src="{% static 'assets_dashboard/images/baniere1.png' %}" alt=""  data-bgposition="center center" data-kenburns="off" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 -500" data-offsetend="0 500" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
                 
                 <!-- LAYER NR. 1 -->
                 <div class="tp-caption Gym-Display fweight-8 white uppercase tp-resizeme" 
@@ -44,7 +44,7 @@
                     data-paddingbottom="[0,0,0,0]"
                     data-paddingleft="[0,0,0,0]"
         
-                    style="z-index: 7; white-space: nowrap;text-transform:left;">Bienvenue sur
+                    style="z-index: 7; white-space: nowrap;text-transform:left;"> Bienvenue sur 
                 </div>
                 
                 <!-- LAYER NR. 2 -->
@@ -78,7 +78,7 @@
                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","speed":1000,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":700,"to":"y:[175%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"300","ease":"Power2.easeOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;"}]'
             data-textAlign="['left','left','left','left']"
                     
-                    style="z-index: 6"> <a href="#">Savoir Plus... &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    style="z-index: 6"> <a href="{% url 'services' %}">Savoir Plus... &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                 </div>
                 
             </li>
@@ -88,7 +88,7 @@
               <li data-index="rs-2" data-transition="slideup" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="" data-description=""> 
                 
                 <!-- MAIN IMAGE --> 
-                <img src="{% static 'assets_dashboard/images/baniere2.jpg' %}" alt=""  data-bgposition="center center" data-kenburns="off" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 -500" data-offsetend="0 500" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+                <img src="{% static 'assets_dashboard/images/baniere2.png' %}" alt=""  data-bgposition="center center" data-kenburns="off" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 -500" data-offsetend="0 500" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
                 
                 <!-- LAYER NR. 1 -->
                 <div class="tp-caption Gym-Display fweight-8 white uppercase tp-resizeme" 
@@ -144,7 +144,7 @@
                     data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","speed":1000,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":700,"to":"y:[175%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"},{"frame":"hover","speed":"300","ease":"Power2.easeOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;"}]'
             data-textAlign="['left','left','left','left']"
                     
-                    style="z-index: 6"> <a href="#">DEMANDER EXTRAIT  &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    style="z-index: 6"> <a href="{% url 'demande_extrait' %}">DEMANDER EXTRAIT  &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                 </div>
                 
             </li>
@@ -259,7 +259,7 @@
           </div>
           <h3 class="margin-bottom-1">VERIFIER UNE DEMANDE</h3>
           <p>Verifier le statut de votre demande. <br><br></p>
-          <a href="{% url 'verification' %}" class="but-stbutton-2 text-small uppercase "> Cliquez ici &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+          <a href="#" class="but-stbutton-2 text-small uppercase "> Cliquez ici &nbsp; <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
       <div class="col-md-4 col-sm-4">

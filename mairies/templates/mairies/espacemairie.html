@@ -15,12 +15,14 @@
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <a href="{% url 'home' %}" class="logo">
-                        <span>
+                        <!-- <span>
                             <img src="{% static 'assets_dashboard/images/logo.jpg' %}" style="width: 40%; border-radius:10%" alt="">
                             </span>
                         <i>
                                 <img src="{% static 'assets_dashboard/images/logo-sm.png' %}" alt="" height="22">
-                            </i>
+                            </i> -->
+
+                            <h1 style="font-weight: bold; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 70%; color: white;">NASEBE</h1>
                     </a>
                 </div>
 
@@ -101,7 +103,7 @@
                     <div id="sidebar-menu">
                         <!-- Left Menu Start -->
                         <ul class="metismenu" id="side-menu">
-                            <li class="menu-title">Main</li>
+                            <li class="menu-title">MENU</li>
                             <li>
                                 <a href="{% url 'home' %}" class="waves-effect"><i class="ti-home"></i><span> Accueil </span></a>
                             </li>
@@ -119,7 +121,7 @@
                             </li>
 
 
-                            <li class="menu-title">Extras</li>
+                            <li class="menu-title">AUTRES </li>
 
                             <li>
                                 <a href="{% url 'services' %}" class="waves-effect"><i class="ti-server"></i><span> Services </span></a>
@@ -323,93 +325,7 @@
                         <!-- end row -->
 
 
-                        <div class="col-xl-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="mt-0 header-title mb-4"> Voir les 5 dernières demandes </h4>
-                                   
-                                    <div class="table-responsive">
-                                        <table class="table table-hover">
-                                            <thead style="background-color: blue; color:white;">
-                                              <tr>
-                                                <th scope="col"> NOM ET PRENOMS </th>
-                                                <th scope="col">TELEPHONE ET <br> NUMERO D'ACTE DE NAISSANCE </th>
-                                                <th scope="col">VILLE DE RESIDENCE </th>
-                                                <th scope="col">NOMBRE DE COPIE </th>
-                                                <th scope="col" colspan="2">DATE DE NAISSANCE <br> ET NOM DE <br> LA MERE </th>
-                                              </tr>
-                                            </thead>
-                                            <tbody>
-                                              {% for element in datatabobo %}
-                                              {% if user.username == "neuman" and element.Mairie_de_demande == "ABOB" and element.status == "ACCEPTE"  %}
-                                              
-                                              <tr style="background-color: orange; color:black; font-weight:bold; font-size:18px">
-                                                <td>{{element.Nom}} <br/>  
-                                                  {{element.Prenoms}}</td>
-                                    
-                                                <td>{{element.Telephone}} <br/> 
-                                                  {{element.Numero_acte_de_naissance}}
-                                                </td>
-                                                
-                                                <td> {{element.Ville_de_residence}}</td>
-                                                <td>{{element.Nombre_de_copie}}</td>
-                                                <td>{{element.Date_de_naissance}} <br>
-                                                  {{element.Nom_et_prenoms_de_la_mere}}
-                                                </td>
 
-                                                <td>
-                                                    <a class="btn btn-sm btn-success" href="{{element.id}}/accepte">ACCEPTER</a>
-                                                      
-                                                  </td>
-                        
-                                                  <td>
-                                                    <a class="btn btn-sm btn-danger" href="{{element.id}}/refuse">SUPPRIMER</a>
-                                                      
-                                                  </td>
-                                               
-                                                      
-                                                  
-                                                
-                                              {% endif %}
-                                              {% endfor %}
-                                              </tr>
-                                    
-                                    
-                                              
-                                    
-                                              {% if user.username == "MAIRIE-ADJAME"  %}
-                                              {% for element in dataExtraitadjame %}
-                                              <tr>
-                                                <td>{{element.Nom}} <br/>  
-                                                  {{element.Prenoms}}</td>
-                                    
-                                                <td>{{element.Telephone}}</td>
-                                                <td>{{element.Numero_Acte_de_Naissance}}</td>
-                                                <td> {{element.Ville_de_Residence}}</td>
-                                                <td>{{element.Nombre_de_copie}}</td>
-                                                <td>{{element.Date_de_naissance}}</td>
-                                                <td>{{element.Telephone}}</td>
-                                                <td>{{element.Nom_de_la_mère}}</td>
-                                               
-                                                  
-                                                
-                                                 
-                                        
-                                                  
-                                                      
-                                                  <td>
-                                                  <a class="btn btn-sm btn-danger" href="{{element.id}}/deleteadjame">SUPPRIMER</a>
-                                                    
-                                                </td>
-                                                {% endfor %}
-                                                {% endif %}
-                                              </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                        
                                     
                                 </div>

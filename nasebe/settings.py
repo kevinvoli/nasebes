@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'mairies',
     'demandeurs',
     'crispy_forms',
-    'crispy_bootstrap4'
+    'crispy_bootstrap4',
     # Applications téléchargées  'crispy_forms','crispy_bootstrap4'
    
 

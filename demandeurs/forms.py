@@ -39,7 +39,7 @@ class ExtraitForm(ModelForm):
     Numero_acte_de_naissance=forms.CharField(
         max_length=100,
         required=True,
-        widget=forms.TextInput(attrs={'placeholder': 'Numéro acte de naissance'}),
+        widget=forms.TextInput(attrs={'placeholder': '(exemple: 732 du 21 01 1998 / ANYAMA)'}),
         label='Numero d\'acte de naissance : '
         )    
     Ville_de_residence=forms.CharField(
